@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="h-screen w-screen bg-concrete-200 flex flex-col">
+    <!-- header -->
+    <div class="bg-navy flex flex-row justify-between">
+        <h1 class="flex text-3xl font-flama font-semibold p-4 ml-3 text-gray-50">
+            Perfil do grupo
+        </h1>
+        <li class="flex items-center">
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl mx-2 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Home</button>
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl ml-2 mr-4 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Logout</button>
+            <img id="avatarButton" type="button" class="h-10 ml-2 mr-4 rounded-full" src="./images/user_icon.png">
+        </li>
+    </div>
+    <!-- /header -->
+
+    <!-- content -->
+
+    <!-- group description -->
+
+    <!-- if viewed by: non member --> <!--
+    <div class="w-full grid grid-cols-1 overflow-auto gap-y-8 px-24 pb-8">
+        <h1 class="h-32 w-full pb-4 flex items-end text-5xl text-navy text-left font-semibold font-roboto">Nome do grupo</h1>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Sistema de jogo: D&D</h1>
+        </div>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Número de jogadores: 01/08</h1>
+        </div>
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Ver campanha</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Ver lista de membros</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-leaf rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Solicitar entrada</h1>
+        </button>
+    </div>
+    --> <!-- /if viewed by: non member -->
+
+    <!-- if viewed by: member or master --> <!--
+    <div class="w-full grid grid-cols-1 overflow-auto gap-y-8 px-24 pb-8">
+        <h1 class="h-32 w-full pb-4 flex items-end text-5xl text-navy text-left font-semibold font-roboto">Nome do grupo</h1>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Sistema de jogo: D&D</h1>
+        </div>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Número de jogadores: 01/08</h1>
+        </div>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Visibilidade: Público</h1>
+        </div>
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Ver campanha</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Ver lista de membros</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-crimson rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Deixar grupo</h1>
+        </button>
+    </div>
+    --> <!-- /if viewed by: member or master -->
+
+    <!-- if viewed by: leader -->
+    <div class="w-full grid grid-cols-1 overflow-auto gap-y-8 px-24 pb-8">
+        <div class="flex flex-row items-end">
+            <h1 class="h-32 pb-4 flex items-end text-5xl text-navy text-left font-semibold font-roboto">Nome do grupo</h1>
+            <button class="h-10 w-10 flex p-2 ml-8 mb-4 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Sistema de jogo: D&D</h1>
+            <button class="h-10 w-10 flex p-2 m-8 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Número de jogadores: 01/08</h1>
+            <button class="h-10 w-10 flex p-2 m-8 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Visibilidade: Público</h1>
+            <button class="h-10 w-10 flex p-2 m-8 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        <!-- if the next session has been scheduled -->
+        <div class="h-28 w-full flex items-center bg-concrete-400 rounded-lg">
+            <h1 class="pl-8 text-3xl text-zinc-700 text-left font-roboto">Próxima sessão: - - - </h1>
+            <button class="h-10 w-10 flex p-2 m-8 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 380 380" stroke="white" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M190,0C85.233,0,0,85.233,0,190s85.233,190,190,190s190-85.233,190-190S294.767,0,190,0z M190,340
+                        c-82.71,0-150-67.29-150-150S107.29,40,190,40s150,67.29,150,150S272.71,340,190,340z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M291.993,184.132h-74.197c-2.696-4.393-6.403-8.1-10.796-10.796V84.139c0-9.389-7.611-17-17-17c-9.389,0-17,7.611-17,17
+                        v89.197c-9.345,5.737-15.593,16.05-15.593,27.796c0,17.972,14.622,32.593,32.593,32.593c11.746,0,22.059-6.248,27.796-15.593
+                        h74.197c9.389,0,17-7.611,17-17C308.993,191.743,301.382,184.132,291.993,184.132z"/>
+                </svg>
+            </button>
+        </div>
+        <!-- if the next session has been scheduled -->
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Ver campanha</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Contratar campanha</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Ver lista de membros</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-acqua rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Ver solicitações de entrada</h1>
+        </button>
+        <button class="h-28 w-full flex items-center bg-crimson rounded-lg hover:ring-2">
+            <h1 class="pl-8 text-3xl text-gray-50 text-left font-roboto">Deixar grupo</h1>
+        </button>
+    </div>
+    <!-- /if viewed by: leader -->
+
+    <!-- /group description -->
+    
+    <!-- /content-->
+</body>
+</html>

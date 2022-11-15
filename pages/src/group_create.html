@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="h-screen w-screen bg-concrete-200 flex flex-col">
+    <!-- header -->
+    <div class="bg-navy flex flex-row justify-between">
+        <h1 class="flex text-3xl font-flama font-semibold p-4 ml-3 text-gray-50">
+            Criação de grupo
+        </h1>
+        <li class="flex items-center">
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl mx-2 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Home</button>
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl ml-2 mr-4 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Logout</button>
+            <img id="avatarButton" type="button" class="h-10 ml-2 mr-4 rounded-full" src="./images/user_icon.png">
+        </li>
+    </div>
+    <!-- /header -->
+
+    <!-- content -->
+    <div class="h-full w-full flex flex-row">
+        <!-- forms -->
+        <div class="h-full w-1/2 flex flex-col">
+            <div class="h-1/4">
+                <h1 class="h-full w-full flex justify-center items-end p-8 text-5xl font-bold font-roboto text-navy">Crie seu grupo</h1>
+            </div>
+            <div class="h-1/2 flex flex-col justify-center space-y-4">
+                <div class="w-full flex flex-col items-center">
+                    <h1 class="w-1/2 text-3xl font-normal font-roboto text-left text-navy">Nome do grupo</h1>
+                    <input class="h-12 w-1/2 pl-4 text-xl" type="text">
+                </div>
+                <div class="w-full flex flex-col items-center">
+                    <h1 class="w-1/2 text-3xl font-normal font-roboto text-left text-navy">Sistema de jogo</h1>
+                    <input class="h-12 w-1/2 pl-4 text-xl" type="text">
+                </div>
+                <div class="w-full flex flex-col items-center">
+                    <h1 class="w-1/2 text-3xl font-normal font-roboto text-left text-navy">Máximo de jogadores</h1>
+                    <input class="h-12 w-1/2 pl-4 text-xl" type="number">
+                </div>
+                <div class="w-full flex flex-row justify-center items-center">
+                    <h1 class="mr-4 text-3xl font-normal font-roboto text-left text-navy">Seu grupo é público?</h1>
+                    <input class="h-12 w-12" type="checkbox">
+                </div>
+                
+            </div>
+            <div class="h-1/4 flex justify-center">
+                <button class="h-12 w-36 flex justify-center items-center bg-acqua text-gray-50 text-xl ml-2 mr-4 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Criar grupo</button>
+            </div>
+        </div>
+        <!-- /forms -->
+
+        <!-- bg image -->
+        <div class="h-full w-1/2 flex justify-center" style="background: url('./images/bg4.png'); height:auto;"></div>
+        <!-- /bg image -->
+    </div>
+    <!-- /content-->
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="h-screen w-screen bg-concrete-200 flex flex-col">
+    <!-- header -->
+    <div class="bg-navy flex flex-row justify-between">
+        <h1 class="flex text-3xl font-flama font-semibold p-4 ml-3 text-gray-50">
+            Buscar grupo
+        </h1>
+        <li class="flex items-center">
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl mx-2 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Home</button>
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl ml-2 mr-4 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Logout</button>
+            <img id="avatarButton" type="button" class="h-10 ml-2 mr-4 rounded-full" src="./images/user_icon.png">
+        </li>
+    </div>
+    <!-- /header -->
+
+    <!-- search bar -->
+    <div class="h-14 w-full bg-concrete-400 flex justify-around items-center">
+        <input class="w-[95%] h-3/4 pl-4 ml-4 mr-2 text-xl rounded" type="text" placeholder="Buscar...">
+        <button type="button" x-on:click="showFilters = !showFilters" class="flex justify-center rounded-lg cursor-pointer text-gray-50 p-2 bg-concrete-400 ring-2 ring-gray-50 hover:bg-concrete-200" x-bind:class="{ 'bg-gray-300': showFilters }">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            </svg>
+        </button>
+        <!-- filters --> <!---
+        <div class="bg-gray-50 rounded-lg shadow-lg absolute top-full right-0 mt-2 p-4 flex flex-col gap-y-4" x-show="showFilters" x-transition="">
+            <div class="flex items-start gap-x-6">
+                <div class="flex-col">
+                    <h2 class="text-lg font-semibold mb-2">Modalidade</h2>
+                    <div class="flex gap-x-2 items-center">
+                        <div>
+                            <input class="block p-2 border border-gray-300 rounded-lg " id="session-style-0" name="style" value="Presencial" type="radio" form="masterListForm">
+                        </div>
+                        <label class="block text-gray-800 font-semibold capitalize" for="session-style-0">
+                                Presencial
+                        </label>
+                    </div>
+                    <div class="flex gap-x-2 items-center">
+                        <div>
+                            <input class="block p-2 border border-gray-300 rounded-lg " id="session-style-1" name="style" value="Remoto" type="radio" form="masterListForm">
+                        </div>
+                        <label class="block text-gray-800 font-semibold capitalize" for="session-style-1">
+                                Remoto
+                        </label>
+                    </div>
+                    <div class="flex gap-x-2 items-center">
+                        <div>
+                            <input class="block p-2 border border-gray-300 rounded-lg " id="session-style-2" name="style" value="Ambos" type="radio" form="masterListForm" checked="checked">
+                        </div>
+                        <label class="block text-gray-800 font-semibold capitalize" for="session-style-2">
+                                Ambos
+                        </label>
+                    </div>
+                </div>
+                <div class="flex-col">
+                    <h2 class="text-lg font-semibold mb-2">Ordenar</h2>
+                    <div class="flex gap-x-2 items-center">
+                        <div>
+                            <input class="block p-2 border border-gray-300 rounded-lg " id="sort-rating" name="sort" value="rating" type="radio" form="masterListForm" checked="checked">
+                        </div>
+                        <label class="block text-gray-800 font-semibold capitalize" for="sort-rating">
+                            Nota
+                        </label>
+                    </div>
+                    <div class="flex gap-x-2 items-center">
+                        <div>
+                            <input class="block p-2 border border-gray-300 rounded-lg " id="sort-hours" name="sort" value="dm_hours" type="radio" form="masterListForm">
+                        </div>
+                        <label class="block text-gray-800 font-semibold capitalize" for="sort-hours">
+                            Horas Mestradas
+                        </label>
+                    </div>
+                    <div class="flex gap-x-2 items-center">
+                        <div>
+                            <input class="block p-2 border border-gray-300 rounded-lg " id="sort-price" name="sort" value="session_price" type="radio" form="masterListForm">
+                        </div>
+                        <label class="block text-gray-800 font-semibold capitalize" for="sort-price">
+                            Preço da Sessão
+                        </label>
+                    </div>
+                </div>
+                <div class="flex-col self-center">
+                    <button type="button" x-on:click="$refs.direction.value = sortDirection = (sortDirection == 'asc') ? 'desc' : 'asc'" class="rounded-lg cursor-pointer hover:bg-gray-200 text-gray-800 p-2">
+                        <svg class="w-6 h-6" x-show="sortDirection == 'asc'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display: none;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"></path>
+                        </svg>
+                        <svg class="w-6 h-6" x-show="sortDirection == 'desc'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"></path>
+                        </svg>
+                    </button>
+                    <div>
+                        <input class="block p-2 border border-gray-300 rounded-lg " id="direction" name="direction" value="desc" x-ref="direction" type="hidden" form="masterListForm">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <button class="px-4 py-1.5 rounded-lg text-white bg-indigo-700" type="submit" form="masterListForm">
+                    Aplicar
+                </button>
+            </div>
+        </div> 
+        --> <!-- /filters -->
+    </div>
+    <!-- /search bar -->
+
+    <!-- content -->
+    <div class="h-full w-full grid grid-cols-2 gap-4 p-4 overflow-auto">
+        <!-- group -->
+        <button class="h-52 w-full bg-acqua flex items-center p-4 rounded-lg hover:ring-2">
+            <div class="flex flex-col justify-center pl-8">
+                <h1 class="text-3xl text-gray-50 text-left font-roboto">Nome do grupo</h1>
+                <h2 class="text-2xl text-gray-50 text-left font-roboto">Sistema de jogo</h2>
+                <h2 class="text-2xl text-gray-50 text-left font-roboto">01/08 Jogadores</h2>
+                <h2 class="text-2xl text-gray-50 text-left font-roboto">Público</h2>
+            </div>
+        </button>
+        <!-- /group -->
+        
+        <!-- group -->
+        <button class="h-52 w-full bg-acqua flex items-center p-4 rounded-lg hover:ring-2">
+            <div class="flex flex-col justify-center pl-8">
+                <h1 class="text-3xl text-gray-50 text-left font-roboto">Nome do grupo</h1>
+                <h2 class="text-2xl text-gray-50 text-left font-roboto">Sistema de jogo</h2>
+                <h2 class="text-2xl text-gray-50 text-left font-roboto">01/08 Jogadores</h2>
+                <h2 class="text-2xl text-gray-50 text-left font-roboto">Público</h2>
+            </div>
+        </button>
+        <!-- /group -->
+        
+    </div>
+    <!-- /content-->
+</body>
+</html>

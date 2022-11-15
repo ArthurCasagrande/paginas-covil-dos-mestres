@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="h-screen w-screen bg-concrete-200 flex flex-col">
+    <!-- header -->
+    <div class="bg-navy flex flex-row justify-between">
+        <h1 class="flex text-3xl font-flama font-semibold p-4 ml-3 text-gray-50">
+            Campanha
+        </h1>
+        <li class="flex items-center">
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl mx-2 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Home</button>
+            <button class="h-12 w-36 bg-acqua text-gray-50 text-xl ml-2 mr-4 my-2 px-4 py-1 rounded hover:ring-1 hover:ring-blue-700">Logout</button>
+            <img id="avatarButton" type="button" class="h-10 ml-2 mr-4 rounded-full" src="./images/user_icon.png">
+        </li>
+    </div>
+    <!-- /header -->
+
+    <!-- content -->
+
+    <!-- campaign description -->
+    <div class="h-[45%] w-full pl-12 pr-12 pt-8 pb-3 flex flex-row">
+        <div class="h-full w-1/2 mr-3 flex flex-row justify-between bg-concrete-400 rounded-lg">
+            <p class="h-full w-full pl-12 pt-8 pb-8 text-3xl text-zinc-700 text-left font-roboto">Descrição: Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam illum deleniti labore architecto! Distinctio facilis odit sunt quisquam! Inventore sint quos sunt laboriosam autem dolorem aperiam sequi soluta quas deserunt!</p>
+            <button class="h-10 w-10 flex p-2 m-2 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        <div class="h-full w-1/2 ml-3 flex flex-row justify-between bg-concrete-400 rounded-lg">
+            <h1 class="h-full w-full pl-12 pt-8 pb-8 text-3xl text-zinc-700 text-left font-roboto">Horários: Seg e Qua, 19h a 20h</h1>
+            <button class="h-10 w-10 flex p-2 m-2 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="h-[15%] w-full pl-12 pr-12 pt-3 pb-3 flex flex-row">
+        <div class="h-full w-1/2 mr-3 flex flex-row justify-between bg-concrete-400 rounded-lg">
+            <h1 class="h-full w-full pl-12 pt-8 pb-8 text-3xl text-zinc-700 text-left font-roboto">Sistema de jogo: D&D</h1>
+            <button class="h-10 w-10 flex p-2 m-2 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        <div class="h-full w-1/2 ml-3 flex flex-row justify-between bg-concrete-400 rounded-lg">
+            <h1 class="h-full w-full pl-12 pt-8 pb-8 text-3xl text-zinc-700 text-left font-roboto">Modalidade: Presencial</h1>
+            <button class="h-10 w-10 flex p-2 m-2 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        
+    </div>
+
+    <div class="h-[15%] w-full pl-12 pr-12 pt-3 pb-8 flex flex-row">
+        <div class="h-full w-1/2 mr-3 flex flex-row justify-between bg-concrete-400 rounded-lg">
+            <h1 class="h-full w-full pl-12 pt-8 pb-8 text-3xl text-zinc-700 text-left font-roboto">Preço por sessão: R$20,00</h1>
+            <button class="h-10 w-10 flex p-2 m-2 bg-acqua rounded-full hover:ring-2 text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+            </button>
+        </div>
+        <button class="h-full w-1/2 ml-3 pl-12 pr-12 pt-8 pb-8 bg-crimson text-3xl text-left text-gray-50 rounded-lg hover:ring-2">Remover anúncio</button>
+    </div>
+    <!-- /campaign description -->
+
+    <!-- button -->
+        <!-- if not hired -->
+
+        <!-- /if not hired -->
+
+        <!-- if hired -->
+
+        <!-- /if hired -->
+    <!-- button -->
+        
+    
+    <!-- /content-->
+</body>
+</html>
